@@ -26,7 +26,6 @@ const Image = () => {
 
     return (
         <div className="image-container">
-            <h1>View our Destinations</h1>
             <div className="image-grid">
                 {data.allContentfulImage.nodes.map((image, key) => (
                     <Img 

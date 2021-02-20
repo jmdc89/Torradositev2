@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { FaBars, FaTimes } from "react-icons/fa"
-// import { IconContext } from "react-icons/lib";
+import { IconContext } from "react-icons/lib";
 import {Nav, NavbarContainer, MobileIcon, NavMenu, NavItem, NavLinks, NavLinksGallery} from "./NavbarElements"
 import logo from '../../assets/logo.png'
 
@@ -26,8 +26,8 @@ const Navbar = () => {
 
     return (
         <>
-            {/* <IconContext.Provider value={{color:"#141414"}}> */}
-                <Nav active={scroll} click={click}>
+            <IconContext.Provider value={{color:"#141414"}}>
+                {/* <Nav active={scroll} click={click}> */}
                     <NavbarContainer>
                         <img src={logo} alt="Logo" /> 
                         <MobileIcon onClick={handleClick}>
@@ -39,6 +39,8 @@ const Navbar = () => {
                             </NavItem>
                             <NavItem>
                                 <NavLinks to="/gallery">Gallery</NavLinks>
+                            </NavItem>
+                            <NavItem>
                                 <NavLinksGallery to="/nature">Nature</NavLinksGallery>
                                 <NavLinksGallery to="/landscape">Lanscape</NavLinksGallery>
                                 <NavLinksGallery to="/surf">Surf</NavLinksGallery>
@@ -56,8 +58,8 @@ const Navbar = () => {
                             </NavItem>
                         </NavMenu>
                     </NavbarContainer>
-                </Nav>
-            {/* </IconContext.Provider> */}
+                {/* </Nav> */}
+            </IconContext.Provider>
         </>
     )
 }

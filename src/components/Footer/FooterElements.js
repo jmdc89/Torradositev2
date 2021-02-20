@@ -8,6 +8,7 @@ export const FooterContainer = styled.div`
     flex-direction: columns;
     justify-content: center;
     align-items: center;
+    z-index: 999;
 `
 
 export const SocialMedia = styled.section`

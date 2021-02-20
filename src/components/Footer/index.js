@@ -7,10 +7,6 @@ const Footer = () => {
         <FooterContainer>
             <SocialMedia>
                 <SocialMediaWrap>
-                    <SocialLogo to="/">
-                        <SocialIcon />
-                        EXPLOR
-                    </SocialLogo>
                     <WebsiteRights>EXPLOR © {new Date().getFullYear()}</WebsiteRights>
                     <SocialIcons>
                         <SocialIconLink href="/" target="_blank" aria-label="Facebook">

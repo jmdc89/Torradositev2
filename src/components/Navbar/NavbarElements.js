@@ -2,30 +2,64 @@ import styled from 'styled-components'
 import {DiScala} from "react-icons/Di"
 import {Link} from "gatsby"
 
-export const Nav = styled.nav`
-    background: ${({active}) => active ? "#fff" : "linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100% )"};
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+// export const Nav = styled.nav`
+//     background: ${({active}) => active ? "#fff" : "linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100% )"};
+//     height: 80px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-size: 1rem;
+//     position: sticky;
+//     top: 0;
+//     z-index: 999;
 
-    @media screen and (max-width: 960px) {
-        background: ${({click}) => (click ? "#fff" : "transparent")};
-        transition: 0.8s all ease;
-    }
-`
+//     @media screen and (max-width: 960px) {
+//         background: ${({click}) => (click ? "#fff" : "transparent")};
+//         transition: 0.8s all ease;
+//     }
+// `
+
+
+
+// export const NavbarContainerCopy = styled.div`
+//     display:flex;
+//     flex-direction: column;
+//     min-height: 100vh;
+//     justify-content: space-between;
+//     height: 80px;
+//     z-index: 1;
+//     width: 100%;
+//     max-width: 1000px;
+
+//     img {
+//         position: relative;
+//         width: 200px;
+//         top: -20px;
+//         right: 45px;
+//     }
+// `
 
 export const NavbarContainer = styled.div`
-    display:flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1000px;
+    background-color: white;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 0;
+    justify-content: left;
+    
+    img {
+        position: relative;
+        width: 200px;
+        top: -20px;
+        right: 45px;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: flex
+        flex-direction: column;
+
+    }
+
 `
 
 // export const NavLogo = styled(Link)`
@@ -58,7 +92,8 @@ export const MobileIcon = styled.div`
 
 export const NavMenu = styled.ul`
     display: flex;
-    align-items:center;
+    flex-direction: column;
+    align-items:left;
     list-style: none;
     text-align: center;
 
@@ -68,7 +103,7 @@ export const NavMenu = styled.ul`
         width: 100%;
         height: 90vh;
         position: absolute;
-        top: ${({ click }) => (click ? "100%" : "-1000px") };
+        top: ${({ click }) => (click ? "100%" : "-1200px") };
         opacity: 1;
         transition: all 0.2s ease;
         background: #fff;
@@ -76,7 +111,7 @@ export const NavMenu = styled.ul`
 `
 
 export const NavItem = styled.li`
-    height:80px;
+    height:100%;
 
     @media screen and (max-width: 960px) {
         width: 100%;
