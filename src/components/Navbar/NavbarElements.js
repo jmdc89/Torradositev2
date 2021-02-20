@@ -28,15 +28,15 @@ export const NavbarContainer = styled.div`
     max-width: 1000px;
 `
 
-export const NavLogo = styled(Link)`
-    color: #141414;
-    justify-self: flex-start;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-`
+// export const NavLogo = styled(Link)`
+//     color: #141414;
+//     justify-self: flex-start;
+//     cursor: pointer;
+//     text-decoration: none;
+//     font-size: 1.5rem;
+//     display: flex;
+//     align-items: center;
+// `
 
 export const NavIcon = styled(DiScala)`
 margin: 0 0.5rem 0 2rem;
@@ -92,6 +92,29 @@ export const NavLinks = styled(Link)`
     height: 100%;
     font-family: "Ubuntu", sans-serif;
     font-size: 20px;
+
+    @media screen and (max-width: 960px) {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+
+        &:hover {
+            color: #ff4040;
+            transition: all 0.3s ease;
+        }
+    }
+`
+
+export const NavLinksGallery = styled(Link)`
+    color: #141414;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.1rem 1rem;
+    height: 50%;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
 
     @media screen and (max-width: 960px) {
         text-align: center;

@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { FaBars, FaTimes } from "react-icons/fa"
-import { IconContext } from "react-icons/lib";
-import {Nav, NavbarContainer, NavLogo, NavIcon, MobileIcon, NavMenu, NavItem, NavLinks} from "./NavbarElements"
+// import { IconContext } from "react-icons/lib";
+import {Nav, NavbarContainer, MobileIcon, NavMenu, NavItem, NavLinks, NavLinksGallery} from "./NavbarElements"
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
 
@@ -25,13 +26,10 @@ const Navbar = () => {
 
     return (
         <>
-            <IconContext.Provider value={{color:"#141414"}}>
+            {/* <IconContext.Provider value={{color:"#141414"}}> */}
                 <Nav active={scroll} click={click}>
                     <NavbarContainer>
-                        <NavLogo to="/">
-                            <NavIcon />
-                            EXPLOR
-                        </NavLogo>
+                        <img src={logo} alt="Logo" /> 
                         <MobileIcon onClick={handleClick}>
                             {click ? <FaTimes/> : <FaBars />}
                         </MobileIcon>
@@ -40,15 +38,26 @@ const Navbar = () => {
                                 <NavLinks to="/">Home</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to="/images">Images</NavLinks>
+                                <NavLinks to="/gallery">Gallery</NavLinks>
+                                <NavLinksGallery to="/nature">Nature</NavLinksGallery>
+                                <NavLinksGallery to="/landscape">Lanscape</NavLinksGallery>
+                                <NavLinksGallery to="/surf">Surf</NavLinksGallery>
+                                <NavLinksGallery to="/architecture">Architecture</NavLinksGallery>
+                                <NavLinksGallery to="/aerial">Aerial</NavLinksGallery>
                             </NavItem>
-                            {/* <NavItem>
-                                <NavLinks to="/destinations">Destinations</NavLinks>
-                            </NavItem> */}
+                            <NavItem>
+                                <NavLinks to="/about">About</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to="/contact">Contact</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to="/instagram">Instagram</NavLinks>
+                            </NavItem>
                         </NavMenu>
                     </NavbarContainer>
                 </Nav>
-            </IconContext.Provider>
+            {/* </IconContext.Provider> */}
         </>
     )
 }
