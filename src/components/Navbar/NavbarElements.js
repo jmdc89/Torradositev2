@@ -84,6 +84,7 @@ export const MobileIcon = styled.div`
     @media screen and (max-width: 960px) {
         display: block;
         position: absolute;
+        color: white;
         top: 0;
         right: 0;
         transform: translate(-100%, 60%);
@@ -114,6 +115,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
     height:100%;
+    margin-left:20px;
 
     @media screen and (max-width: 960px) {
         width: 100%;
@@ -144,7 +146,7 @@ export const NavLinks = styled(Link)`
 `
 
 export const NavLinksGallery = styled(Link)`
-    color: white;
+    color: gray;
     display: flex;
     align-items: center;
     text-decoration: none;
