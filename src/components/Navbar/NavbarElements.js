@@ -50,7 +50,6 @@ import {Link} from "gatsby"
 // `
 
 export const NavbarContainer = styled.div`
-    background-color: white;
     min-height: 100vh;
     width: 250px;
     position: fixed;
@@ -122,7 +121,7 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(Link)`
-    color: #141414;
+    color: white;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -145,7 +144,7 @@ export const NavLinks = styled(Link)`
 `
 
 export const NavLinksGallery = styled(Link)`
-    color: #141414;
+    color: white;
     display: flex;
     align-items: center;
     text-decoration: none;

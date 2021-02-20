@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa"
 import { IconContext } from "react-icons/lib";
 import {Nav, Firma, NavbarContainer, MobileIcon, NavMenu, NavItem, NavLinks, NavLinksGallery} from "./NavbarElements"
 import logo from '../../assets/logo.png'
-import firma from '../../assets/firma2.png'
+import firma from '../../assets/firmainvertida.png'
 import {firmaimg, logoimg} from './navbar.module.scss'
 
 
