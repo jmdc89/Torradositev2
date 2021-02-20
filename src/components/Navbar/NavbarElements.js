@@ -1,6 +1,16 @@
 import styled from 'styled-components'
 import {DiScala} from "react-icons/Di"
 import {Link} from "gatsby"
+// import firma from '../../assets/firma2.png'
+
+// export const Firma = styled.img.attrs({
+//     src: `${firma}`
+// })`
+//     position: absolute;
+//     width: 500px;
+//     bottom: 0;
+// `;
+
 
 // export const Nav = styled.nav`
 //     background: ${({active}) => active ? "#fff" : "linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100% )"};
@@ -41,18 +51,11 @@ import {Link} from "gatsby"
 
 export const NavbarContainer = styled.div`
     background-color: white;
-    height: 100%;
+    min-height: 100vh;
     width: 250px;
     position: fixed;
     z-index: 0;
     justify-content: left;
-    
-    img {
-        position: relative;
-        width: 200px;
-        top: -20px;
-        right: 45px;
-    }
 
     @media screen and (max-width: 768px) {
         display: flex

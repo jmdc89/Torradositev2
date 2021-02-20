@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import { FaBars, FaTimes } from "react-icons/fa"
 import { IconContext } from "react-icons/lib";
-import {Nav, NavbarContainer, MobileIcon, NavMenu, NavItem, NavLinks, NavLinksGallery} from "./NavbarElements"
+import {Nav, Firma, NavbarContainer, MobileIcon, NavMenu, NavItem, NavLinks, NavLinksGallery} from "./NavbarElements"
 import logo from '../../assets/logo.png'
+import firma from '../../assets/firma2.png'
+import {firmaimg, logoimg} from './navbar.module.scss'
+
 
 const Navbar = () => {
 
@@ -29,7 +32,7 @@ const Navbar = () => {
             <IconContext.Provider value={{color:"#141414"}}>
                 {/* <Nav active={scroll} click={click}> */}
                     <NavbarContainer>
-                        <img src={logo} alt="Logo" /> 
+                        <img className={logoimg} src={logo} alt="Logo" /> 
                         <MobileIcon onClick={handleClick}>
                             {click ? <FaTimes/> : <FaBars />}
                         </MobileIcon>
@@ -57,6 +60,7 @@ const Navbar = () => {
                                 <NavLinks to="/instagram">Instagram</NavLinks>
                             </NavItem>
                         </NavMenu>
+                        <img className={firmaimg} src={firma} alt="Firma" />  
                     </NavbarContainer>
                 {/* </Nav> */}
             </IconContext.Provider>
