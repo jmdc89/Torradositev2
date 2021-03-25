@@ -30,7 +30,7 @@ const Navbar = () => {
     return (
         <>
             <IconContext.Provider value={{color:"#141414"}}>
-                {/* <Nav active={scroll} click={click}> */}
+                <Nav active={scroll} click={click}>
                     <NavbarContainer>
                         <img className={logoimg} src={logo} alt="Logo" /> 
                         <MobileIcon onClick={handleClick}>
@@ -62,7 +62,7 @@ const Navbar = () => {
                         </NavMenu>
                         <img className={firmaimg} src={firma} alt="Firma" />  
                     </NavbarContainer>
-                {/* </Nav> */}
+                </Nav>
             </IconContext.Provider>
         </>
     )

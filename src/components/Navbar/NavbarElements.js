@@ -12,22 +12,21 @@ import {Link} from "gatsby"
 // `;
 
 
-// export const Nav = styled.nav`
-//     background: ${({active}) => active ? "#fff" : "linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100% )"};
-//     height: 80px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     font-size: 1rem;
-//     position: sticky;
-//     top: 0;
-//     z-index: 999;
+export const Nav = styled.nav`
 
-//     @media screen and (max-width: 960px) {
-//         background: ${({click}) => (click ? "#fff" : "transparent")};
-//         transition: 0.8s all ease;
-//     }
-// `
+    @media screen and (max-width: 960px) {
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        transition: 0.8s all ease;
+    }
+    
+`
 
 
 
@@ -57,9 +56,14 @@ export const NavbarContainer = styled.div`
     justify-content: left;
 
     @media screen and (max-width: 768px) {
-        display: flex
-        flex-direction: column;
-
+        width: 100%;
+        position: relative;
+        
+        display:flex;
+      
+        height: 500px;
+        z-index: 1;
+        width: 100%;
     }
 
 `
